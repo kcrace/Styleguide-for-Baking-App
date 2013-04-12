@@ -6,16 +6,32 @@
 
 * {	margin: 0; padding: 0; position: relative; text-decoration: none; }
 
-.container { 
-	width:940px; 
-	margin: 0 auto;
+
+.cf:before, .cf:after { content: " "; display: table; }
+.cf:after { clear: both; }
+
+/*side by side content*/
+.half-container {
+	width:900px;
+	margin:0 auto 0 0;
+	display:inline-block;
+	background: rgb(255, 255, 255);
+	padding: 30px 0px;
+	border-right: 9px solid #d6d6d6; 
 }
 
-.container:before, .container:after { content: " "; display: table; }
-.container:after { clear: both; }
+.text-container{
+	width: 900px;
+	padding: 0px 90px;
+}
 
-/*image content*/
-.banner-image{
+body{
+	background: url('img/food-grey.jpg') repeat-x fixed;
+	z-index: -10;
+}
+
+/*banner image content*/
+/*.banner-image{
 	background: url('img/food.jpg') no-repeat center;
 	height: 400px;
 	margin: 40px 0px;
@@ -27,71 +43,64 @@
 	height: 140px;
 	margin: 70px 0px;
 	position: relative;
-}
-
-/*.image-overlay{
-	background: #ddc683;
-	opacity: 0.5;
-	height: 300px;
-	width: 940px;
-	margin-top: 48px;
-	display: inline-block;
 }*/
 
-.text-overlay{
-	padding: 20px 60px;
-	width: 940px;
-	margin-top: 32px;
+
+/*.text-overlay{
+	padding: 20px 20px;
+	margin: 32px 0;
 	display: inline-block;
-	background: rgba(83, 83, 83, 0.2);
-}
+	background: url('img/food.jpg') no-repeat fixed;
+}*/
 
 /*colors*/
 
 /*half color rgbas
-yellow = rgba(163, 58, 70, 0.5)
+red = rgba(163, 58, 70, 0.5)
 yellow = rgba(221, 198, 131, 0.5)
-grey = rgba(83, 83, 83, 0.75)*/
+grey = rgba(83, 83, 83, 0.5)
+green = rgba(32, 79, 90, 0.5)
+background-color: rgba( 255, 225, 225, 0.5)*/
 
-.pink-bg {
+.wine-bg {
 	background-color: #a33a46;
 }
-.pink {
+.wine {
 	color: #a33a46;
 }
 
-.green-bg {
-	background-color: #204f5a;
+.forest-bg {
+	background-color: #3d4f2f;
 }
-.green {
-	color: #204f5a;
+.forest {
+	color: #3d4f2f;
 }
 
-.grey-bg {
+.gravel-bg {
 	background-color: #565354;
 }
-.grey {
+.gravel {
 	color: #565354;
 }
 
-.light-grey-bg {
+.pale-gravel-bg {
 	background-color: #d6d6d6;
 }
-.light-grey {
+.pale-gravel {
 	color: #d6d6d6;
 }
 
-.light-pink-bg {
+.pale-wine-bg {
 	background-color: #ffe1e1;
 }
-.light-pink {
+.pale-wine {
 	color: #ffe1e1;
 }
 
-.light-yellow-bg {
+.pale-gold-bg {
 	background-color: #ddc683;
 }
-.light-yellow {
+.pale-gold {
 	color: #ddc683;
 }
 
@@ -100,10 +109,9 @@ grey = rgba(83, 83, 83, 0.75)*/
 
 h1 {
   font-family: "goudy-bookletter-1911",serif;
-  font-size: 100px;
+  font-size: 85px;
   font-weight: 300;
-  letter-spacing: .02em;
-  color: rgba(255, 255, 255, 0.85);
+  color: #3d4f2f;
   /*text-shadow: -1px 1px 14px rgba(83, 83, 83, 0.5);
 */ }
 
@@ -112,30 +120,30 @@ h2 {
   font-size: 65px;
   letter-spacing: .03em;
   font-weight: 300;
-  color: #565354;;
+  color: #565354;
   /*text-shadow: 0px 1px 2px rgba(83, 83, 83, 0.3);
 */ }
 
 h3 {
   font-family: "goudy-bookletter-1911",serif;
-  font-size: 45px;
+  font-size: 55px;
   font-weight: 400;
   letter-spacing: .02em;
-  color: #a33a46;
+  color: #3d4f2f;
  }
 
  h4 {
   font-family: "goudy-bookletter-1911",serif;
-  font-size: 32px;
+  font-size: 40px;
   font-weight: 400;
   color: #565354;
  }
 
  h5 {
   font-family: "goudy-bookletter-1911",serif;
-  font-size: 22px;
+  font-size: 30px;
   font-weight: 300;
-  color: #565354;
+  color: #3d4f2f;
 }
 
 p {
@@ -145,7 +153,14 @@ p {
   color: #565354;
   line-height: 1.5em;
   letter-spacing: .01em;
+ }
 
+ p.swatch-text {
+  font-family: "rooney-sans",sans-serif;
+  font-size: 9px;
+  font-weight: 300;
+  color: #565354;
+  margin-top: 48px;
  }
 
 span {
@@ -168,30 +183,53 @@ span {
  	text-decoration: line-through;
  }
 
+/* line decoration*/
+.line{
+	height: 3px;
+	width: 600px;
+	margin: 50px auto;
+	background-color: #efefef;
+	border-radius: 100%; 
+}
 
 
+/*color swatches*/
 
-
-/*tools*/
-
-.padding-color{
-	width: 940px;
-	margin-top: -178px;
-	padding-left: 35px;
+.color-section{
+	width: 900px;
+	padding: 30px 100px;
 }
 
 .color-example{
-	width: 145px;
-	height: 65px;
+	width: 98px;
+	height: 45px;
 	display:inline-block; 
-	margin: 0px -2px 0px;
+	margin: 10px 7px 19px;
+	border-radius: 2px;
+	color: white;
+	border-bottom: 5px solid #cec8c9;
+}
+
+.image-bg{
+	background: url('img/food.jpg') no-repeat fixed;
+	width: 98px;
+	height: 45px;
+	display:inline-block; 
+	margin: 10px 7px -23px;
+	border-radius: 2px;
+	border-bottom: 5px solid #cec8c9;
 }
 
 .color-example-half{
-	width: 145px;
-	height: 30px;
+	width: 98px;
+	height: 40px;
 	display:inline-block; 
-	margin: -4px -2px 0px;
-	opacity: 0.5;
+	margin: -115px 7px 0px;
+	border-radius: 2px;
+	opacity: .5;
+	
 }
+
+
+
 
