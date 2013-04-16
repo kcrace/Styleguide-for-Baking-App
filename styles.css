@@ -70,10 +70,10 @@ background-color: rgba( 255, 225, 225, 0.5)*/
 }
 
 .forest-bg {
-	background-color: #1D3849;
+	background-color: #06495B;
 }
 .forest {
-	color: #1D3849;
+	color: #06495B;
 }
 
 .gravel-bg {
@@ -111,7 +111,7 @@ h1 {
   font-family: "goudy-bookletter-1911",serif;
   font-size: 85px;
   font-weight: 300;
-  color: #1D3849;
+  color: #06495B;
   /*text-shadow: -1px 1px 14px rgba(83, 83, 83, 0.5);
 */ }
 
@@ -120,7 +120,7 @@ h2 {
   font-size: 65px;
   letter-spacing: .03em;
   font-weight: 300;
-  color: #1D3849;
+  color: #06495B;
   /*text-shadow: 0px 1px 2px rgba(83, 83, 83, 0.3);
 */ }
 
@@ -136,7 +136,7 @@ h3 {
   font-family: "goudy-bookletter-1911",serif;
   font-size: 40px;
   font-weight: 400;
-  color: #d6d6d6;
+  color: #565354;
  }
 
  h5 {
@@ -273,10 +273,11 @@ a:active {
 	padding: 12px 34px;
 	font-size: 14px;
 	color: #565354;
-	background:  #ffe1e1;
+	background:  #ffe1e1 url('img/food.png') fixed center;
 	font-family: "rooney-sans",sans-serif;
 	border-radius: 2px;
 	margin: 10px 7px;
+	border-bottom: 4px solid #d6d6d6;
 	cursor: pointer;
 	-webkit-transition: all 0.4s ease;
 	-moz-transition:all 0.4s ease;
@@ -286,7 +287,7 @@ a:active {
 .button.main {
 	padding: 22px 54px;
 	font-size: 18px;
-	background: #a33a46;
+	background: #a33a46 url('img/food.png') fixed center;
 	color: white;
 	margin-left: -20px;
 	margin-right: 34px;
@@ -294,13 +295,13 @@ a:active {
 
 .button.inactive,.button.inactive:hover  {
 	background:  rgba(5, 3, 3, 0.08);
-	color: #d6d6d6;
+	color: rgba( 83, 83, 83, 0.3);
 	box-shadow: inset 0 0 0 1px #d6d6d6;
 	cursor: not-allowed;
 }
 
 .button:hover {
-	background: #1D3849; 
+	background: #1D3849 url('img/food.png') fixed center; 
 	color: white;
 }
 
@@ -319,34 +320,39 @@ input[type="text"] {
 	padding: 12px 20px;
 	font-family: "rooney-sans",sans-serif;
 	margin: 10px 20px;
-	color:  #565354;
+	color:  #06495B;
 	font-size: 14px;
 	border-radius: 2px;
 	border: 1px solid #d6d6d6;
+	border-bottom: 4px solid #d6d6d6;
 	box-shadow: inset 0 0 7px #ffe1e1;
 }
 input[type="text"]::-webkit-input-placeholder {
-	color: #d6d6d6;
+	color:  rgba( 83, 83, 83, 0.5);
 	font-family: "rooney-sans",sans-serif;
 	font-size: 14px;
 }
 
 input[type="text"]:focus{
-	box-shadow: 0 0 7px #ddc683;
+	box-shadow: 0 0 14px 0 #ddc683;
+	outline:none;
 }
 
 input[type="text"].error {
 	background: #ffe1e1;
 	color: #d6d6d6;
 	border: 1px solid #d6d6d6;
+	border-bottom: 4px solid #d6d6d6;
 	box-shadow: none;
 }
 input[type="text"].error:focus {
-	box-shadow: 0 0 7px #ddc683;
+	box-shadow: 0 0 12px #ddc683;
+	outline:none;
 }
 input[type="text"].disabled {
 	background: rgba(5, 3, 3, 0.08);
 	cursor: not-allowed;
+
 }
 
 /*.button.inactive,.button.inactive:hover  {
