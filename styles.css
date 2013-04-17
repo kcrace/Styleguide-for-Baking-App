@@ -108,15 +108,15 @@ background-color: rgba( 255, 225, 225, 0.5)*/
 
 
 h1 {
-  font-family: "freight-sans-pro",sans-serif;
-  font-size: 90px;
+  font-family: "goudy-bookletter-1911",serif;
+  font-size: 100px;
   font-weight: 300;
   color: #06495B;
   /*text-shadow: -1px 1px 14px rgba(83, 83, 83, 0.5);
 */ }
 
 h2 {
-  font-family: "freight-sans-pro",sans-serif;
+  font-family: "goudy-bookletter-1911",serif;
   font-size: 70px;
   font-weight: 300;
   color: rgba( 83, 83, 83, 0.9);
@@ -125,7 +125,7 @@ h2 {
 
 h3 {
   font-family: "goudy-bookletter-1911",serif;
-  font-size: 55px;
+  font-size: 60px;
   font-weight: 400;
   letter-spacing: .02em;
   color: rgba( 83, 83, 83, 0.7);
@@ -279,21 +279,27 @@ a:active {
 	margin: 10px 7px;
 	border-bottom: 4px solid #d6d6d6;
 	cursor: pointer;
-	-webkit-transition: all 0.4s ease;
-	-moz-transition:all 0.4s ease;
-	-o-transition: all 0.4s ease;
-	transition: all 0.4s ease;
+	-webkit-transition: all 0.3s ease;
+	-moz-transition:all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
 }
 .button.main {
 	padding: 22px 54px;
 	font-size: 20px;
 	background: #a33a46 url('img/food.png') fixed center;
 	color: white;
-	margin-left: -20px;
-	margin-right: 34px;
+	margin-left: 7px;
+	margin-right: 7px;
 }
 
-.button.inactive,.button.inactive:hover  {
+.button.simple {
+	font-size: 14px;
+	background: #ffe1e1;
+	padding: 6px 22px;
+}
+
+.button.inactive, .button.simple.inactive,.button.simple.inactive:hover,.button.inactive:hover  {
 	background:  rgba(5, 3, 3, 0.08);
 	color: rgba( 83, 83, 83, 0.3);
 	box-shadow: inset 0 0 0 1px #d6d6d6;
@@ -305,8 +311,23 @@ a:active {
 	color: white;
 }
 
+.button.simple:hover {
+	background: rgba(6, 73, 91, .8); 
+	color: white;
+}
+
 .button:active {
 	background: #ddc683;
+	border-bottom: 0px;
+	-webkit-transition: none;
+	-moz-transition: none;
+	-o-transition: none;
+	transition:  none;
+}
+
+.button.simple:active {
+	background: #ddc683;
+	border-bottom: 0px;
 	-webkit-transition: none;
 	-moz-transition: none;
 	-o-transition: none;
